@@ -1,40 +1,5 @@
 # TakeMeter
 
-> ### 👋 Start here
->
-> **New to this repo? Read [RUNNING.md](RUNNING.md) first** — setup, the
-> notebook, the baseline, and what to do when something breaks.
->
-> Once `python test.py` passes:
->
-> ```bash
-> head -5 data/practice_labels.csv     # the shape your labels.csv needs
-> ```
->
-> Then open `takemeter.ipynb` **in this folder** — in VS Code, or with
-> `jupyter notebook` if you prefer. Pick the kernel: the `.venv` inside this
-> project. Run section 1, which reports the hardware you'll be training on.
-> Everything else waits until you have data.
->
-> Nothing to upload, nothing to connect, no accounts and no keys. The notebook
-> runs on your machine and writes next to your code.
->
-> **The rest of this file is your submission.** Fill it in as you go.
-
----
-
-<!-- ─────────────────────────────────────────────────────────────────────────
-     HOW TO USE THIS FILE
-
-     Unit 5 asks for the first five sections. Unit 6 adds the five below them.
-
-     Everything is pasted as TEXT. No screenshots, no images.
-
-     ⚠️ The confusion matrix especially. The notebook prints one as a markdown
-     table, ready to copy. A screenshot of a matrix earns nothing. Paste the
-     table.
-     ───────────────────────────────────────────────────────────────────────── -->
-
 <!-- ═══════════════════════ UNIT 5 — THE BUILD ═══════════════════════ -->
 
 ## What This Does
@@ -48,41 +13,42 @@
 
 ## Label Taxonomy
 
-<!-- Each label: a one-sentence definition and two real examples from your
-     reading. Then your decision rule for the hardest boundary.
+### `reasoned`
 
-     The decision rule is worth a point on its own and it's the thing most
-     people leave out. Every taxonomy has a hardest boundary. Name yours. -->
-
-### `label_one`
-
-**Definition:**
+**Definition:** The comment states a specific (a mechanism, policy, number, or finding) and the conclusion depends on it.
 
 **Example 1:**
->
+> "Registration at my school was in waves. With graduate students, veterans, disability students, and honors students being the very first wave. Meaning, they got to pick classes before everyone else. So even as a freshman, so long as you were honors, you got to make your schedule on the first or second day registration opened."
 
 **Example 2:**
->
+> "Take what you want unless you plan on entering a field where foreign language is really necessary. If you're going into engineering for example, there's not a whole work related reason to learn a specific language. If you're going into a field where you need to interact with the public though and employers either don't have access to or want to save money on interpreters and language lines, that's another story. Spanish really only makes you stand out in healthcare, social services, and sometimes customer service roles in areas with higher proportion of Spanish speakers."
 
-### `label_two`
+### `experience`
 
-**Definition:**
+**Definition:** The writer says they personally went through it, and the story stands without a specific.
 
 **Example 1:**
->
+> "I picked Italian because it was something different and I liked italian films. Now in my junior year I've worked with Italians and I've done study abroad. I think that if there is a language that interests you, it will be useful."
 
 **Example 2:**
->
+> "In secondary school, I took French because I loved ths language, no other reason. My fluency then exempted me from the undergraduate language requirement. But in grad school, starting to think about my future career and where I was planning to work, I switched to studying Spanish for mainly practical reasons, plys a little bit because I'd started to become much more aware, and embarrassed by, the racial and linguistic tensions that had quietly divided the town I grew up in."
+
+### `take`
+
+**Definition:** A verdict, advice, or agreement with nothing behind it.
+
+**Example 1:**
+> "If you don't think an A+ is better than an A, you should just drop it. You're not the type of person this was designed for."
+
+**Example 2:**
+> "I think this is odd. I wouldn't do this."
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `reasoned` and `experience`
 
 **The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
-
-
+If a comment states a specific (what the evidence says, not just that evidence exists) and the conclusion has no reason left once the specifics are removed, it is `reasoned`, even if the writer is speaking from their own experience. A detail that explains why the conclusion holds counts as a specific. A detail that only reports an outcome does not. If no specific carries the conclusion, but the writer says they personally went through it, it is `experience`. Everything else is `take`. The check is whether the specific is stated in the comment, not whether the claim is true.
 
 ---
 
