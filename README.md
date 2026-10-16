@@ -15,7 +15,7 @@
 
 ### `reasoned`
 
-**Definition:** The comment states a specific (a mechanism, policy, number, or finding) and the conclusion depends on it.
+**Definition:** The comment states a specific (a mechanism, policy, number, or finding) and the conclusion depends on it. A general claim about people is not a specific, because nobody could check it.
 
 **Example 1:**
 > "Registration at my school was in waves. With graduate students, veterans, disability students, and honors students being the very first wave. Meaning, they got to pick classes before everyone else. So even as a freshman, so long as you were honors, you got to make your schedule on the first or second day registration opened."
@@ -25,7 +25,7 @@
 
 ### `experience`
 
-**Definition:** The writer says they personally went through it, and the story stands without a specific.
+**Definition:** The writer reports something they did or saw firsthand, and the story stands without a specific. A writer’s own habits, role, or preferences count as experience, not as a specific.
 
 **Example 1:**
 > "I picked Italian because it was something different and I liked italian films. Now in my junior year I've worked with Italians and I've done study abroad. I think that if there is a language that interests you, it will be useful."
@@ -35,7 +35,7 @@
 
 ### `take`
 
-**Definition:** A verdict, advice, or agreement with nothing behind it.
+**Definition:** A verdict, advice, or agreement with nothing behind it. A story about someone else is never experience. It is reasoned if it holds a specific, otherwise take.
 
 **Example 1:**
 > "If you don't think an A+ is better than an A, you should just drop it. You're not the type of person this was designed for."
