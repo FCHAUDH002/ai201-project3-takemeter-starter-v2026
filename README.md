@@ -54,48 +54,43 @@ First, if the comment gives no reason, or only one short reason, it is `take`. T
 
 ## The Dataset
 
-<!-- Where you collected from, how you labelled, your counts, and three hard
-     cases. -->
-
 **Where the posts came from:**
+All 200 posts are comments from 10 threads on r/college, a public subreddit. I picked threads with a mix of advice, personal stories, and debates. These threads were about various topics such as RateMyProfessor, emailing professors before class, choosing a foreign language, honors programs, Harvard's cap on A grades, a CS student feeling stuck, taking the same professor again, asking a professor about research, women's scholarships, and work-study pay. 
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:**
+I labeled 20 comments cold first, with no help, using two from each thread. Then I used AI to pre-label the other 180 using my definitions and decision rule and I checked every one and revised any that I did not agree with. 
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| `take` | 89 | 44.5% |
+| `experience` | 69 | 34.5% |
+| `reasoned` | 42 | 21% |
+| **Total** | 200 | 100% |
 
 **Three hard cases**
 
-<!-- Any post that made you pause: what it was, which two labels it could have
-     been, and what you chose. These are worth more than the easy 190. -->
-
 **1.**
-> *The post:*
+> *The post:* "Stick with the professor you already know and like. You don't know what you're getting into with a new professor. You already have a good rapport, stay with it."
 >
-> *Could have been:*
+> *Could have been:* `take` or `reasoned`
 >
-> *I chose, because:*
+> *I chose `take`, because:* it gives advice with only short reasons and never builds an argument. My cold label was `reasoned`. But I labeled a very similar comment ("Definitely don't do that. You'll be categorized as an annoying student before they even meet you.") as `take`. That showed me I wasn't drawing the line between one short reason and a real argument the same way every time.
 
 **2.**
-> *The post:*
+> *The post:* "I took English 1 and 2 with the same professor. Loved him so much I took literature with him too. I now have to take other literature classes with other professors and I'm nervous. I am familiar with his teaching style so now I have to get familiar with another one. I would stick with a familiar professor."
 >
-> *Could have been:*
+> *Could have been:* `experience` or `reasoned`
 >
-> *I chose, because:*
+> *I chose `experience`, because:* almost the whole comment is the writer's own story, and it only ends with a short lesson. My cold label was `reasoned`, but I had labeled another story that ended with a verdict as `experience`. My final rule says to pick the label the comment spends most of its words on, which is the story.
 
 **3.**
-> *The post:*
+> *The post:* "There no taxes you file exempt."
 >
-> *Could have been:*
+> *Could have been:* `take` or `reasoned`
 >
-> *I chose, because:*
+> *I chose `take`, because:* it is one short statement with nothing behind it. It states a rule, but it doesn't explain it or connect it to a bigger point. I went back and forth on this one, along with two other short work-study comments, and decided all three should be `take` so the rule stays consistent.
 
 ---
 
