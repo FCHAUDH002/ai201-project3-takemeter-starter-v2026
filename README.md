@@ -123,11 +123,11 @@ I labeled 20 comments cold first, with no help, using two from each thread. Then
 
 - *What I asked for:* After revising my decision rule and labels, I asked AI to label the remaining 180 comments under it and check the result against my criteria.
 - *What came back:* The labels were lopsided. `reasoned` grew to 56% of my data, which broke my balance criterion. AI suggested a different rule based on the patterns in my cold labels: `reasoned` only when a comment builds a real argument, `experience` when it is mostly the writer's own story, and `take` when it gives no reason or one short reason. 
-- *What I changed:* I switched to that rule and revised all three label definitions and my decision rule in the README. I also rewrote the reasons for criteria 3 and 5 so they describe my new hardest boundary: whether a comment gives one short reason or builds a real argument.
+- *What I changed:* I switched to that rule and revised all three label definitions and my decision rule in the README. I also rewrote the reasons for criteria 3 and 5 so they describe my new hardest boundary: whether a comment gives one short reason or builds a real argument. 
 
 **Pre-labelling disclosure:**
 
-I labeled 20 comments cold with no help. AI then pre-labeled the other 180 using my definitions and decision rule, and I reviewed every one. After I revised my rule, I re-checked my 20 cold comments with AI help and updated 8 of them. AI also turned my screenshots of the threads into `labels.csv`, and helped me draft my criteria and parts of this README, which I edited.
+I labeled 20 comments cold with no help. After this, I used to AI to then then pre-labeled the other 180 using my updated label definitions and decision rule. I reviewed every one and revised any that I did not agree with.  
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
