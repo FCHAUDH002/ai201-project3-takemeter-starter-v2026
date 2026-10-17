@@ -4,10 +4,7 @@
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
-
-
+TakeMeter sorts comments from r/college, a public subreddit where students ask about classes, professors, majors, and money. It labels each comment as one of three types. A `reasoned` comment builds an argument for a general point. An `experience` comment is mostly the writer's own story or how things work at their school. A `take` is a verdict, advice, or agreement with little or no reason behind it.
 
 ---
 
@@ -96,44 +93,41 @@ I labeled 20 comments cold first, with no help, using two from each thread. Then
 
 ## The Training Run
 
-<!-- Your starting model, your settings, and anything you changed and why. -->
+**Base model:** `distilbert-base-uncased`
 
-**Base model:**
+**Settings:** 3 epochs, learning rate 2e-5, batch size 16, seed 42, and 128 tokens per post. I trained on `mps` (Apple Silicon GPU) with PyTorch 2.14.1. The training took about 1 minute.
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Anything I changed from the defaults, and why:** Nothing. I only changed `LABELS` to match my three labels: `reasoned`, `experience`, and `take`.
 
-**Anything I changed from the defaults, and why:**
+**Split sizes:** train 139 / val 31 / test 30.
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+| Label | Train | Val | Test |
+|---|---|---|---|
+| `reasoned` | 30 | 6 | 6 |
+| `experience` | 47 | 11 | 11 |
+| `take` | 62 | 14 | 13 |
 
-
+`reasoned` has only 6 examples in the test split, which is fewer than 8. A score computed on that few examples will move a lot between seeds, so I expect its F1 to be jumpy next unit.
 
 ---
 
 ## How I Used AI
 
-<!-- Two specific moments — what you asked, what came back, what you changed.
-
-     ⚠️ Plus disclosure of any pre-labelling. If you had a model pre-label a
-     batch and then read and corrected every one, say that. It's an allowed
-     workflow and disclosing it costs you nothing. Not disclosing it is the
-     problem. -->
-
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked AI to compare my 20 cold labels against the decision rule I had written in my README, and say whether my labels actually followed it.
+- *What came back:* It showed that 11 of my 20 labels did not follow my rule. My rule said a comment was `reasoned` only if it had a checkable fact, like a number, a named policy, or a study. But I was calling comments `reasoned` whenever they gave any reason at all, including logic or a personal story used as evidence.
+- *What I changed:* I realized my decision rule did not match how I really labeled. I revised it so `reasoned` meant any comment that gives a reason to argue a general point, whether that reason is a fact, logic, or the writer's own story.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* After revising my decision rule and labels, I asked AI to label the remaining 180 comments under it and check the result against my criteria.
+- *What came back:* The labels were lopsided. `reasoned` grew to 56% of my data, which broke my balance criterion. AI suggested a different rule based on the patterns in my cold labels: `reasoned` only when a comment builds a real argument, `experience` when it is mostly the writer's own story, and `take` when it gives no reason or one short reason. 
+- *What I changed:* I switched to that rule and revised all three label definitions and my decision rule in the README. I also rewrote the reasons for criteria 3 and 5 so they describe my new hardest boundary: whether a comment gives one short reason or builds a real argument.
 
 **Pre-labelling disclosure:**
+
+I labeled 20 comments cold with no help. AI then pre-labeled the other 180 using my definitions and decision rule, and I reviewed every one. After I revised my rule, I re-checked my 20 cold comments with AI help and updated 8 of them. AI also turned my screenshots of the threads into `labels.csv`, and helped me draft my criteria and parts of this README, which I edited.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
