@@ -15,17 +15,17 @@
 
 ### `reasoned`
 
-**Definition:** The comment makes a claim and gives a reason for it: a fact, a logical argument, or a personal story used as evidence.
+**Definition:** The comment makes a general point and builds an argument for it, with more than one step or a concrete example tied to the point.
 
 **Example 1:**
-> "Registration at my school was in waves. With graduate students, veterans, disability students, and honors students being the very first wave. Meaning, they got to pick classes before everyone else. So even as a freshman, so long as you were honors, you got to make your schedule on the first or second day registration opened."
+> "Honestly college should be harder and not just a pass for everyone. If you want the brightest to succeed then you need to push them for success and show that not everyone can just do the bear minimum. Sure when you get to higher levels like the 3000 and 4000 its an area you actually have to work, however those 1000 and 2000 level classes are super easy the majority of the time. This should be true with Community College as well. College isn't high school where you just have to show up."
 
 **Example 2:**
 > "Take what you want unless you plan on entering a field where foreign language is really necessary. If you're going into engineering for example, there's not a whole work related reason to learn a specific language. If you're going into a field where you need to interact with the public though and employers either don't have access to or want to save money on interpreters and language lines, that's another story. Spanish really only makes you stand out in healthcare, social services, and sometimes customer service roles in areas with higher proportion of Spanish speakers."
 
 ### `experience`
 
-**Definition:** The writer tells what happened to them, without using it to argue a general point.
+**Definition:** The comment is mostly the writer's own story, or how things work at their own school, even if it ends with a lesson.
 
 **Example 1:**
 > "I was a second year CS and simply decided to drop because I completely lost touch with it all. It was no longer for me. I gave myself a few years to breathe and went to work and then jumped back into a new major unrelated to CS. That's my experience. Happier now for it."
@@ -35,7 +35,7 @@
 
 ### `take`
 
-**Definition:** A verdict, advice, or agreement with no reason given.
+**Definition:** A verdict, advice, or agreement with no reason, or with only one short reason.
 
 **Example 1:**
 > "If you don't think an A+ is better than an A, you should just drop it. You're not the type of person this was designed for."
@@ -48,7 +48,7 @@
 **Which two labels:** `reasoned` and `take`
 
 **The decision rule I used every time:**
-First, ask whether the comment gives any reason for what it says. A reason has to be more than the claim said again. A bare statement with nothing behind it is `take`. If the comment gives no reason, it is `take`. If it does, ask whether the writer uses that reason to argue a general point. If yes, it is `reasoned`, even if the reason is the writer's own story. If the writer only tells what happened to them and doesn't argue a general point from it, it is `experience`. Someone stating their own preferences or rules is `take`, because a preference is a verdict, not a reason. The check is whether a reason is stated in the comment, not whether it is true.
+First, if the comment gives no reason, or only one short reason, it is `take`. The exception is a concrete number or finding, which counts as an argument even in a short comment. Someone stating their own preferences or rules is also `take`, even if they explain them, because a preference is a verdict, not a reason. Next, if most of the comment is the writer's own story or a description of how things work at their own school, it is `experience`, even if it ends with advice. Otherwise, if it builds an argument for a general point, it is `reasoned`. When two labels still fit, I pick the one the comment spends most of its words on. The check is whether the reason is stated in the comment, not whether it is true.
 
 ---
 
