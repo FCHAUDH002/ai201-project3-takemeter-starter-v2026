@@ -15,7 +15,7 @@
 
 ### `reasoned`
 
-**Definition:** The comment states a specific (a mechanism, policy, number, or finding) and the conclusion depends on it. A general claim about people is not a specific, because nobody could check it.
+**Definition:** The comment makes a claim and gives a reason for it: a fact, a logical argument, or a personal story used as evidence.
 
 **Example 1:**
 > "Registration at my school was in waves. With graduate students, veterans, disability students, and honors students being the very first wave. Meaning, they got to pick classes before everyone else. So even as a freshman, so long as you were honors, you got to make your schedule on the first or second day registration opened."
@@ -25,17 +25,17 @@
 
 ### `experience`
 
-**Definition:** The writer reports something they did or saw firsthand, and the story stands without a specific. A writer’s own habits, role, or preferences count as experience, not as a specific.
+**Definition:** The writer tells what happened to them, without using it to argue a general point.
 
 **Example 1:**
-> "I picked Italian because it was something different and I liked italian films. Now in my junior year I've worked with Italians and I've done study abroad. I think that if there is a language that interests you, it will be useful."
+> "I was a second year CS and simply decided to drop because I completely lost touch with it all. It was no longer for me. I gave myself a few years to breathe and went to work and then jumped back into a new major unrelated to CS. That's my experience. Happier now for it."
 
 **Example 2:**
 > "In secondary school, I took French because I loved ths language, no other reason. My fluency then exempted me from the undergraduate language requirement. But in grad school, starting to think about my future career and where I was planning to work, I switched to studying Spanish for mainly practical reasons, plys a little bit because I'd started to become much more aware, and embarrassed by, the racial and linguistic tensions that had quietly divided the town I grew up in."
 
 ### `take`
 
-**Definition:** A verdict, advice, or agreement with nothing behind it. A story about someone else is never experience. It is reasoned if it holds a specific, otherwise take.
+**Definition:** A verdict, advice, or agreement with no reason given.
 
 **Example 1:**
 > "If you don't think an A+ is better than an A, you should just drop it. You're not the type of person this was designed for."
@@ -48,7 +48,7 @@
 **Which two labels:** `reasoned` and `experience`
 
 **The decision rule I used every time:**
-If a comment states a specific (what the evidence says, not just that evidence exists) and the conclusion has no reason left once the specifics are removed, it is `reasoned`, even if the writer is speaking from their own experience. A detail that explains why the conclusion holds counts as a specific. A detail that only reports an outcome does not. If no specific carries the conclusion, but the writer says they personally went through it, it is `experience`. Everything else is `take`. The check is whether the specific is stated in the comment, not whether the claim is true.
+First, ask whether the comment gives any reason for what it says. If it gives none, it is `take`. If it does, ask whether the writer uses that reason to argue a general point. If yes, it is `reasoned`, even if the reason is the writer's own story. If the writer only tells what happened to them and doesn't argue a general point from it, it is `experience`. Someone stating their own preferences or rules is `take`, because a preference is a verdict, not a reason. The check is whether a reason is stated in the comment, not whether it is true.
 
 ---
 
