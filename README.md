@@ -45,10 +45,10 @@
 
 ### The hardest boundary
 
-**Which two labels:** `reasoned` and `experience`
+**Which two labels:** `reasoned` and `take`
 
 **The decision rule I used every time:**
-First, ask whether the comment gives any reason for what it says. If it gives none, it is `take`. If it does, ask whether the writer uses that reason to argue a general point. If yes, it is `reasoned`, even if the reason is the writer's own story. If the writer only tells what happened to them and doesn't argue a general point from it, it is `experience`. Someone stating their own preferences or rules is `take`, because a preference is a verdict, not a reason. The check is whether a reason is stated in the comment, not whether it is true.
+First, ask whether the comment gives any reason for what it says. A reason has to be more than the claim said again. A bare statement with nothing behind it is `take`. If the comment gives no reason, it is `take`. If it does, ask whether the writer uses that reason to argue a general point. If yes, it is `reasoned`, even if the reason is the writer's own story. If the writer only tells what happened to them and doesn't argue a general point from it, it is `experience`. Someone stating their own preferences or rules is `take`, because a preference is a verdict, not a reason. The check is whether a reason is stated in the comment, not whether it is true.
 
 ---
 

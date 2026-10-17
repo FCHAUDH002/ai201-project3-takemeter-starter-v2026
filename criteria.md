@@ -55,55 +55,56 @@ whether you hit them:
 
 Overall accuracy is at least 0.60 on the held-out set, on all three seeds.
 
-**Why this target:** `take` is my biggest label, at about 45% of my data. A
-model that always guesses `take` would get about 0.45. To be useful, my model
-has to beat that by a clear amount. 0.60 means getting about 5 more posts
-right out of 30.
+**Why this target:** `reasoned` is my biggest label, at about 45% of my data. A
+model that always guesses `reasoned` would get about 0.45. To be useful, my
+model has to beat that by a clear amount. 0.60 means getting about 5 more
+posts right out of 30.
 
 ---
 
 ## 2. The two big labels
 
-`take` and `experience` each have an F1 of at least 0.60, on all three seeds.
+`reasoned` and `take` each have an F1 of at least 0.60, on all three seeds.
 
-**Why this target:** These are my two biggest labels. Each has about 10 to 14
-posts in the test split, which is enough for a steady score. They are also the
-easiest to spot. `experience` comments almost always say "I" or "my." Many
-`take` comments are only one or two lines long.
+**Why this target:** These are my two biggest labels. Each has about 11 to 14
+posts in the test split, which is enough for a steady score. I didn't set it
+higher because the line between them is my hardest boundary. Many takes give
+something that looks like a reason but is really the claim said again.
 
 ---
 
 ## 3. The small label
 
-`reasoned` has an F1 of at least 0.40, on all three seeds.
+`experience` has an F1 of at least 0.40, on all three seeds.
 
-**Why this target:** `reasoned` is my smallest label, at about 20%. Only about
-6 posts land in the test split, so one wrong guess moves the score a lot. It is
-also the hardest label to get right. Many `reasoned` comments are told as
-personal stories, and many takes give a reason that sounds specific but isn't.
-So this target is lower than the other two.
+**Why this target:** `experience` is my smallest label, at about 18%. Only
+about 5 or 6 posts land in the test split, so one wrong guess moves the score
+a lot. It is also easy to mix up with `reasoned`, because many `reasoned`
+comments are personal stories too. The only difference is whether the story
+argues a general point. So this target is lower than the other two.
 
 ---
 
 ## 4. Balance
 
-No label is more than 50% of labels.csv, and `reasoned` has at least 40 rows.
+No label is more than 50% of labels.csv, and `experience` has at least 30 rows.
 
-**Why this target:** The brief allows up to 70%, but `take` was already about
-45% in my sample. Some threads, like the Harvard one, are almost all takes, so
-it could climb higher. 40 `reasoned` rows is 20% of 200. That keeps about 6 in
-the test split. With fewer, criterion 3 can't really be measured.
+**Why this target:** After I changed my rule, `reasoned` grew to almost half
+my data. Above 50%, the model could score well just by guessing `reasoned`. 30
+`experience` rows is 15% of 200. That keeps about 5 in the test split. With
+fewer, criterion 3 can't really be measured.
 
 ---
 
 ## 5. Consistency
 
-My agreement with the staff labels is at least 70% (21 of 30).
+My agreement with the course staff's labels on their 30-post practice set is
+at least 70% (21 of 30).
 
-**Why this target:** My labels depend on small judgment calls, like whether a
-detail explains the conclusion or only reports what happened. If I can't apply
-staff's written rules at 70%, my own 200 labels probably aren't consistent
-either. Staff say a rate in the 70s is normal, so 70% is fair but not easy.
+**Why this target:** My labels depend on a judgment call: whether a comment
+gives a real reason or just says its claim again. If I can't apply staff's
+written rules at 70%, my own 200 labels probably aren't consistent either.
+Staff say a rate in the 70s is normal, so 70% is fair but not easy.
 
 ---
 
