@@ -1,0 +1,184 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": false,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.5,
+    "f1_macro": 0.34121621621621623,
+    "per_label": {
+      "experience": {
+        "precision": 0.6,
+        "recall": 0.2727272727272727,
+        "f1": 0.37499999999999994,
+        "support": 11
+      },
+      "reasoned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "take": {
+        "precision": 0.5,
+        "recall": 0.9230769230769231,
+        "f1": 0.6486486486486487,
+        "support": 13
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "In our department there are usually a few undergraduates that start working in labs as freshman. What is your field and longterm goal?",
+      "gold": "experience",
+      "predicted": "take"
+    },
+    {
+      "text": "Exactly. I was about to say \"here's a student who understands\" and then realized you were also a professor. \ud83d\ude02",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "I took French in part because English borrows so many words from French that I figured learning the vocabulary would be easier. I was right.",
+      "gold": "experience",
+      "predicted": "take"
+    },
+    {
+      "text": "Sorry I wish i could be more helpful but I'm confused out of my own mind lol.",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "Do AI and ML courses and be updated with industry demands courses",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "In secondary school, I took French because I loved ths language, no other reason. My fluency then exempted me from the undergraduate language requirement. But in grad school, starting to think about my future career and where I was planning to work, I switched to studying Spanish for mainly practical reasons, plys a little bit because I'd started to become much more aware, and embarrassed by, the racial and linguistic tensions that had quietly divided the town I grew up in.",
+      "gold": "experience",
+      "predicted": "experience"
+    },
+    {
+      "text": "> If straight A's become less common, students may feel freer to take risks and focus on learning rather than preserving a perfect record.\n\nlol. Lmao even. If employers/other schools care about gpa students will optimize for GPA.",
+      "gold": "take",
+      "predicted": "reasoned"
+    },
+    {
+      "text": "Yeah I've studied 6 foreign languages, none of them are ever truly \"useful\" unless you get a job in international finance (where I assume most people speak English anyways) or become a social worker.\n\nIt's for personal enrichment, or for travel.\n\nDepends on the major and future life plans though.",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "I am a native Urdu and Hindi speaker, and heard there are some similarities in grammar",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "Wasn't there some research done regarding Ivy league schools and if the quality of the curriculum is even that much better, and it turned out Harvard actually kinda sucks? All of this is just performative.",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "I was studying social work at the time and pretty much had no choice but to choose Spanish. Not that any other language would have felt more natural.",
+      "gold": "experience",
+      "predicted": "take"
+    },
+    {
+      "text": "It was set to be Neuroscience pre-med but OBBBA gave me a funding gap and I went nursing. I decided that MD-PhD was too high risk / high reward at this point (that was the dream goal though)",
+      "gold": "experience",
+      "predicted": "take"
+    },
+    {
+      "text": "Do you think that no poor women exist?",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "At my school, the perks were basically just early registration and nicer freshman housing. I did it year 1, then dropped it.\n\nI personally doubt that it will make a difference in the job market (or at least other stuff can easily make up for it), and it was lowkey a lot of coursework to stay in the program.\n\nI'd look at the perks you get throughout school and weight against the amount of work it takes - I wouldn't do it for future employment benefits (doubtful they exist and are truly only available to honors students)",
+      "gold": "experience",
+      "predicted": "take"
+    },
+    {
+      "text": "Don't use the numbers on rate my professor. Read the reviews for more specific context. If you have multiple reviews that say mostly the same thing, then be prepared for that to actually happen.\n\nRMP, like every other review platform, if heavily biased. The people with average experiences generally don't go on there and make a rating. The people that care enough to go on are people who think they had an extreme experience, doesn't matter if it's good or bad (it's usually people that perceive they had a bad experience though.)\n\nAnalyze the content and decide what things you can live with and what things you can't. I had a lecturer a couple semesters ago that absolutely treated her students badly. There were multiple times she flew off the handle and trigged a ptsd episode in me...there were multiple reviews that mentioned her behavior but i couldn't imagine a teacher actually doing that so i miatakenly ignored them. Now, i take those kinds of reviews seriously. I can live with a teacher giving quizzes that don't entirely cover the lecture material (we are supposed to be reading the materials and doing some independent learning). I can't live with a teacher that treats people badly. So that's what I personally look for in reviews now.",
+      "gold": "experience",
+      "predicted": "take"
+    },
+    {
+      "text": "Would you happen to know where this line of thinking comes from? I have heard people saying \"email your professor before classes start to build good raport,\" but it seems odd to me, because sudents will meet them in classes and can make a schedule with them after the fact most of the time.",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "1. The most useful language is the one that interests you and that you'll want to keep studying. If you learn Bosnian, for example, you can make it useful by traveling to Bosnia, talking to Bosnian speakers, consuming Bosnian media, etc.\n2. Spanish is only useful in some parts of the US. I don't know where you live, but that it's useful everywhere in America is an overgeneralization I see often.",
+      "gold": "reasoned",
+      "predicted": "take"
+    },
+    {
+      "text": "Definitely don't do that. You'll be categorized as an annoying student before they even meet you.",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "I went to UO for two years and had a work study.\n\nWith a work study your job aint gonna be like \"you must put the money you make towards tuition. Basically the number they give you is just to help you estimate how much money you would need to pay tuition\n\nI think I got like a 1,000 on my financial aid package but I definitely earned more than that.",
+      "gold": "experience",
+      "predicted": "take"
+    },
+    {
+      "text": "Another option is to look at what populations you might want to work with in your career. My husband speaks fluent German and has B1 Yiddish proficiency (including being able to read Yiddish, which is written with the Hebrew alphabet). Beyond the obvious population of German-speaking Europeans, he's also able to communicate with hardcore religious groups like Mennonites and Hasidic Jews, which are underserved populations in secular society. Most people would call German \"useless\" to learn in North America, but it's given him some unique opportunities.",
+      "gold": "reasoned",
+      "predicted": "take"
+    },
+    {
+      "text": "There used to be a \"chili pepper\" rating the professor's physical physique... it was basically used to objectify women, and rightly so, it was removed",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "if i was able to choose again i would've chosen Sign Language\n\nit differs a bit country from country, but it opens up a lot of doors for you as a translator or even just in regular life. plus anyone cam become disabled at any time, it's nice to know at least some basic signs.",
+      "gold": "reasoned",
+      "predicted": "take"
+    },
+    {
+      "text": "Do you have the opportunity to register for both classes and then drop the one you end up not liking? You can maintain a relationship with the old prof by updating her on your academic journey from time to time! You do not need to take her class again. I teach at a university, and if a former student would like to talk to me, I will make time. You can always say hi or connect on LinkedIn! The new professor may or may not fit; the only way to know is to attend a few sessions!",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "I work at a university so I feel like I can offer a unique perspective since I know many of the professors personally(Im am not a professor just support staff). I have looked at the rate my professors ratings for professors at my university and I don't feel like they are very accurate. I feel like they are written with a lot of emotion and people who are emotional may make it seem worse than it is. Some people are just angry they failed when they didn't do the work and just want to blame someone else. I would look at it but keep an open mind and realize that seem people are just bitter.",
+      "gold": "reasoned",
+      "predicted": "experience"
+    },
+    {
+      "text": "I didn't read the article, but if they're doing this because of the rise of chatbots, isn't it a lot more logical to make fundamental changes to the curriculum rather than just increase the difficulty of the teaching material?\n\nAs an example, my uni has seen a resurgence in physical on-paper tests instead of projects/hand-in assignments because they force you to internalize what's being taught.",
+      "gold": "reasoned",
+      "predicted": "take"
+    },
+    {
+      "text": "I lived in another time zone and traveled a lot so I always reached out a week or two prior to ask for the syllabus in advance. My classes were asynchronous and my work life was insane then. But it really helped to know due dates because I was almost always forced to submit assignments a day earlier. Most professors were cool with it. Some didn't give me the time of day.\n\nAt any rate, I only reached out early for that reason or maybe to ask about buying an older edition of the required book. I feel like outside of that seems unnecessary.",
+      "gold": "experience",
+      "predicted": "experience"
+    },
+    {
+      "text": "Honors program at my school meant u could do a fancy project with big companies in the area (NASA for example was one)",
+      "gold": "experience",
+      "predicted": "take"
+    },
+    {
+      "text": "Finish your degree in CS and get a PM role. It's basically a business role, but they I've a technical background (and you get big tech salaries)",
+      "gold": "take",
+      "predicted": "take"
+    },
+    {
+      "text": "What has the school listed as the perks?\n\nAt my kids college, honors kids get specific dorms (they are the newer and nicer ones), the class selection is much broader and, according to my kids, really interesting, more so than the general classes.\n\nIt also allowed them to apply to additional scholarships, of which they won some.\n\nThere are also specific opportunities and activities for the honors college kids.\n\nOverall, they have reported that it's been a great program",
+      "gold": "reasoned",
+      "predicted": "experience"
+    },
+    {
+      "text": "I dropped out of CS and switched to Political Science. I am just as unemployed as I would've been had I stayed in CS but was way less miserable during college. Hopefully when this nightmare administration is over I will also be doing work I actually enjoy. Do what makes you happy, you never know what life is going to be like in even just the next five years, so \"planning ahead\" nowadays is just pointless.",
+      "gold": "experience",
+      "predicted": "experience"
+    }
+  ]
+}
