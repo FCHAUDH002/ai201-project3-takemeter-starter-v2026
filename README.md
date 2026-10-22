@@ -169,23 +169,30 @@ The baseline labeled all 30 posts as `reasoned`. My `reasoned` definition is lon
 | 4.  |  |  |  |  |  |
 | 5.  |  |  |  |  |  |
 
+**Raw numbers across three seeds:**
+
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.600 | 0.733 | 0.600 | 0.133 |
+| Macro F1 | 0.433 | 0.543 | 0.433 | 0.110 |
+| F1 — `reasoned` | 0.000 | 0.000 | 0.000 | 0.000 |
+| F1 — `experience` | 0.571 | 0.800 | 0.571 | 0.229 |
+| F1 — `take` | 0.727 | 0.828 | 0.727 | 0.100 |
+
+All runs were trained on `mps` (Apple Silicon GPU), PyTorch 2.14.1. Accuracy moved 0.133 across the three seeds, which is more than 10 points, so my dataset is too small for a stable measure. Seeds 42 and 2024 happened to produce the same numbers on every measure.
+
 ### Confusion matrix
 
-<!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
-     An image of a matrix earns nothing. -->
+Seed 42.
 
-| true \ predicted |  |  |  |
+| true \ predicted | reasoned | experience | take |
 |---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| **reasoned** | 0 | 3 | 3 |
+| **experience** | 0 | 6 | 5 |
+| **take** | 0 | 1 | 12 |
 
 **My biggest off-diagonal number, and what it means:**
-<!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
-     direction. "7 real analysis posts were called hot_take and only 3 went the
-     other way" is a direction, not just an error rate. -->
-
-
+The model labeled 5 `experience` posts as `take`, but only labeled 1 `take` post as `experience`. So when it mixes up these two, it usually guesses `take`. The model also never guessed `reasoned`, so all 6 `reasoned` posts were labeled wrong.
 
 ---
 
