@@ -138,25 +138,21 @@ I labeled 20 comments cold with no help. After this, I used to AI to then then p
 
 ## Baseline vs. Trained
 
-<!-- Both models on the same posts. `python baseline.py --trained results.json`
-     prints this table for you. -->
-
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.200 | 0.600 | +0.400 |
+| Macro F1 | 0.111 | 0.433 | +0.322 |
+| F1 — `experience` | 0.000 | 0.571 | +0.571 |
+| F1 — `reasoned` | 0.333 | 0.000 | -0.333 |
+| F1 — `take` | 0.000 | 0.727 | +0.727 |
 
 **What I predicted before I looked:**
-<!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
-     prediction made afterwards isn't one. -->
+My trained model will beat the baseline on take and experience, since the baseline labeled every post reasoned. It will do worse on reasoned, since the baseline caught all 6 by guessing it every time.
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
-
-
+The baseline labeled all 30 posts as `reasoned`. My `reasoned` definition is long and general, so almost any comment seemed to fit it. The trained model beat it by 0.400 accuracy because it learned to tell `take` and `experience` apart, which the baseline never did. But neither model really learned `reasoned`. The baseline only caught those 6 posts by guessing `reasoned` for everything, and my trained model never predicted it correctly at all.
 
 ---
 

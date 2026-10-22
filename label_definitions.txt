@@ -5,6 +5,6 @@
 #
 # Delete the examples below and put yours in.
 
-analysis: makes an argument backed by a specific, checkable fact
-hot_take: a confident claim with no support offered
-reaction: an immediate response to something that just happened
+reasoned: The comment makes a general point and builds an argument for it, with more than one step or a concrete example tied to the point.
+experience: The comment is mostly the writer's own story, or how things work at their own school, even if it ends with a lesson.
+take: A verdict, advice, or agreement with no reason, or with only one short reason.
