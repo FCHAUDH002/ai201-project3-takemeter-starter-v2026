@@ -226,13 +226,7 @@ The model labeled 5 `experience` posts as `take`, but only labeled 1 `take` post
 
 ## Agreement Report
 
-<!-- Your rate against the staff set, and every disagreement adjudicated.
-
-     Remember you labelled these 30 under the STAFF taxonomy in
-     data/staff_taxonomy.md, not your own — so every argument below is made
-     from those definitions and those decision rules. -->
-
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 28 / 30 = 93%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -241,40 +235,26 @@ The model labeled 5 `experience` posts as `take`, but only labeled 1 `take` post
 
 **Disagreements**
 
-<!-- Three lines each: the post, both labels, and who you think is right and
-     why — grounded in the staff definitions you were both applying.
-
-     Then sort each into one of three piles:
-       (a) the rule covered it and I applied it loosely → a consistency problem
-       (b) the rule genuinely doesn't say               → a gap in the definitions
-       (c) the rule is ambiguous here and my reading is defensible → argue it.
-           This is a legitimate win.
-
-     Pile (a) is the one that matters most for your diagnosis: if you applied a
-     written rule two different ways on 30 posts, that is direct evidence about
-     what you did across your own 200. -->
-
 **1.**
-> *The post:*
+> *The post:* "Three of us ran the same session on the same day, different shoes, within 10 seconds of each other over 5 miles. I'm not saying shoes do nothing, but whatever they do was smaller than the noise between three people."
 >
-> *Staff said / I said:*
+> *Staff said / I said:* `analysis` / `hot_take`
 >
-> *My call, and why:*
+> *My call, and why:* Staff is right. Under rule 1, the three-runner comparison carries the conclusion that shoe effects are smaller than the noise between runners. The `hot_take` definition says "no support offered," and support is offered here. The "I'm not saying shoes do nothing" part is about tone, not content. Someone could argue a self-reported comparison isn't really checkable, but posts 2 and 5 are just as self-reported and I labeled both `analysis`, so that argument would sink them too.
 >
-> *Which pile:*
+> *Which pile:* (a). The rule covered it and I applied it loosely.
 
 **2.**
-> *The post:*
+> *The post:* "Times are down about 3% since the shoe rules changed, so obviously the shoes are the whole story and the sport has a problem."
 >
-> *Staff said / I said:*
+> *Staff said / I said:* `hot_take` / `analysis`
 >
-> *My call, and why:*
+> *My call, and why:* Staff is right. Under rule 1, the 3% is a number, but "obviously the shoes are the whole story" is the conclusion, and the number is decoration on it. Rule 1 names this exact case: "a `hot_take` with a statistic in it." The writer also never shows that the shoes caused the drop.
 >
-> *Which pile:*
+> *Which pile:* (a). The rule covered it and I applied it loosely.
 
 **What the pattern in my disagreements tells me:**
-
-
+Both mistakes were on rule 1, the `analysis` vs `hot_take` boundary, and they went in opposite directions. I called a post `analysis` because it had a number, and called another `hot_take` because it sounded unsure of itself. In both cases I judged by how the post looked instead of asking whether the fact carried the argument. That is the same kind of boundary as my own `reasoned` vs `take`, which I'll use as evidence in my diagnoses.
 
 ---
 
