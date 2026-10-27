@@ -158,16 +158,13 @@ The baseline labeled all 30 posts as `reasoned`. My `reasoned` definition is lon
 
 ## Run Log — Before
 
-<!-- Five criteria across three seeds. The notebook's section 6 prints the
-     spread table; the Target and Verdict columns are yours. -->
-
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.60 | 0.600 | 0.733 | 0.600 | MET |
+| 2. F1 for `take` and `experience` | ≥ 0.60 each | take 0.727, exp 0.571 | take 0.828, exp 0.800 | take 0.727, exp 0.571 | MISSED |
+| 3. F1 for `reasoned` | ≥ 0.40 | 0.000 | 0.000 | 0.000 | MISSED |
+| 4. Balance | No label > 50%, `reasoned` ≥ 40 rows | 44.5%, 42 rows | 44.5%, 42 rows | 44.5%, 42 rows | MET |
+| 5. Agreement with staff | ≥ 70% | 93% | 93% | 93% | MET |
 
 **Raw numbers across three seeds:**
 
@@ -198,29 +195,21 @@ The model labeled 5 `experience` posts as `take`, but only labeled 1 `take` post
 
 ## Verdicts and Diagnoses
 
-<!-- MET or MISSED against LAST UNIT's target. The target has to hold across
-     all three seeds, not turn up sometimes. -->
-
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy | ≥ 0.60 | MET | All three seeds were at least 0.60 (0.600, 0.733, 0.600). Two seeds landed exactly on the target, so this is on the edge. One more wrong post would make it a miss. |
+| 2 | F1 for `take` and `experience` | ≥ 0.60 each | MISSED | `take` passed on all three seeds. `experience` was 0.571 on seeds 42 and 2024. Both labels had to pass on every seed. |
+| 3 | F1 for `reasoned` | ≥ 0.40 | MISSED | 0.000 on all three seeds. |
+| 4 | Balance | No label > 50%, `reasoned` ≥ 40 rows | MET | This is about `labels.csv`, so it is the same for every seed. `take` is 44.5% and `reasoned` has 42 rows. |
+| 5 | Agreement with staff | ≥ 70% | MET | 28 of 30, or 93%. This does not depend on the seed. |
 
 **Diagnoses**
 
-<!-- For each miss: the cause, and how you know. The four common causes are:
-     too few examples for a label, a boundary you applied inconsistently, a
-     genuinely hard label pair, and a task the model can't reach from this
-     much data.
+**Criterion 3: `reasoned` F1 was 0.000 on every seed.**
+The model never predicted `reasoned` at all. In the seed 42 matrix, the 6 real `reasoned` posts were split evenly, 3 to `experience` and 3 to `take`. I think there are two causes. First, too few examples: `reasoned` is my smallest label, with only 30 posts in training and 6 in test. Second, I applied the `reasoned` boundary inconsistently. When I switched to my final rule, 8 of my 20 cold labels changed, and every one of those changes involved `reasoned`. My agreement report points the same way. Both of my disagreements with staff were on rule 1, deciding whether a fact really carries the argument. That is the same kind of judgment as my `reasoned` vs `take` boundary. So this is mostly a labeling problem, made worse by having too few examples.
 
-     ⚠️ Use your agreement report as evidence. It is the only instrument you
-     have that can tell a LABELLING problem from a MODEL problem, and this
-     section is graded on whether you used it that way. -->
-
-
+**Criterion 2: `experience` F1 was 0.571 on two seeds.**
+The matrix shows 5 real `experience` posts called `take`, and only 1 the other way, so the model leans toward `take` on this pair. I think this pair is genuinely hard in my data, not a labeling mistake. My rule says a post is `experience` "even if it ends with a lesson," so many `experience` posts end with advice that looks just like a `take`. My agreement report supports this. I got all 10 `reaction` posts right and made no mistakes on rule 2, which is the staff's version of "about the writer vs a general claim." So I can apply that kind of rule consistently. The seeds also suggest small-sample noise. Seed 7 scored 0.800 on `experience`, but there are only 11 `experience` posts in each test split, so a few posts can swing the score.
 
 ---
 
