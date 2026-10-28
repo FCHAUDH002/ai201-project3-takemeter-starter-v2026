@@ -217,11 +217,6 @@ The matrix shows 5 real `experience` posts called `take`, and only 1 the other w
 
 **Agreement rate:** 28 / 30 = 93%
 
-<!-- Nobody grades this number. A 60% who argues every disagreement from the
-     stated rules beats a 95% who wrote "staff was right" nine times. Several
-     of the 30 were chosen because they're genuinely ambiguous — you should be
-     winning some of these. -->
-
 **Disagreements**
 
 **1.**
@@ -250,25 +245,31 @@ Both mistakes were on rule 1, the `analysis` vs `hot_take` boundary, and they we
 ## The Improvement
 
 **What I changed:**
+I relabeled one boundary: `reasoned` vs `take`. My rule says one short reason is `take`, and more than one step is `reasoned`, but I hadn't counted reasons the same way every time. I applied one reading to every post: one reason is `take`, and two or more reasons, or a chain of reasoning, is `reasoned`. Preferences still count as `take`. My definitions did not change. 7 rows changed: 6 went from `take` to `reasoned`, and 1 went from `reasoned` to `take`. Two of the 7 were cold rows. `reasoned` went from 42 to 47 rows, and `take` went from 89 to 84.
 
 **Which diagnosis pointed at it:**
+My criterion 3 diagnosis said `reasoned` was mostly a labeling problem, because I had applied that boundary inconsistently.
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.60 | 0.667 | 0.600 | 0.433 | MISSED |
+| 2. F1 for `take` and `experience` | ≥ 0.60 each | take 0.828, exp 0.667 | take 0.692, exp 0.667 | take 0.583, exp 0.414 | MISSED |
+| 3. F1 for `reasoned` | ≥ 0.40 | 0.000 | 0.000 | 0.000 | MISSED |
+| 4. Balance | No label > 50%, `reasoned` ≥ 40 rows | 42%, 47 rows | 42%, 47 rows | 42%, 47 rows | MET |
+| 5. Agreement with staff | ≥ 70% | 93% | 93% | 93% | MET |
+
+Seed 42 confusion matrix after the change:
+
+| true \ predicted | reasoned | experience | take |
+|---|---|---|---|
+| **reasoned** | 0 | 5 | 2 |
+| **experience** | 0 | 8 | 2 |
+| **take** | 0 | 1 | 12 |
 
 **Did it help, and how do I know:**
-
-<!-- If it didn't, say so. Relabelling that didn't help is a genuinely
-     interesting result and earns full credit. -->
-
-
+No. `reasoned` stayed at 0.000 on every seed, so the model still never predicts it. Criterion 1 went from MET to MISSED because seed 2024 dropped to 0.433. The spread in accuracy grew from 0.133 to 0.233, so the results got less stable. Relabeling 7 rows was too small a change to teach the model `reasoned`, and changing the labels also changed which posts landed in each test split. This makes me think too few examples is the bigger cause, not just inconsistent labeling.
 
 ---
 
