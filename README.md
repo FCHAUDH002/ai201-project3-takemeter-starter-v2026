@@ -125,6 +125,12 @@ I labeled 20 comments cold first, with no help, using two from each thread. Then
 - *What came back:* The labels were lopsided. `reasoned` grew to 56% of my data, which broke my balance criterion. AI suggested a different rule based on the patterns in my cold labels: `reasoned` only when a comment builds a real argument, `experience` when it is mostly the writer's own story, and `take` when it gives no reason or one short reason. 
 - *What I changed:* I switched to that rule and revised all three label definitions and my decision rule in the README. I also rewrote the reasons for criteria 3 and 5 so they describe my new hardest boundary: whether a comment gives one short reason or builds a real argument. 
 
+**Moment 3 (unit 6)**
+
+- *What I asked for:* For my improvement, I asked AI to find rows where I had applied the `reasoned` vs `take` boundary two different ways.
+- *What came back:* It found pairs of posts with the same shape but different labels, like rows 142 and 156, which both give advice with two reasons. It suggested one reading to apply everywhere: one reason is `take`, two or more reasons or a chain is `reasoned`.
+- *What I changed:* I changed 7 labels and retrained. The change didn't help, which made me think too few examples is the bigger cause of my `reasoned` problem.
+
 **Pre-labelling disclosure:**
 
 I labeled 20 comments cold with no help. After this, I used to AI to then then pre-labeled the other 180 using my updated label definitions and decision rule. I reviewed every one and revised any that I did not agree with.  
@@ -275,15 +281,18 @@ No. `reasoned` stayed at 0.000 on every seed, so the model still never predicts 
 
 ## What's Still Broken
 
-<!-- For each criterion still missed: what you'd do, and why you stopped. -->
+**Criterion 1: accuracy dropped to 0.433 on seed 2024.**
+What I'd do: run more than three seeds to see how much of this is a bad split and how much is the model. With only 30 test posts, a few posts can swing the score a lot. Why I stopped: I ran out of time.
 
+**Criterion 2: experience F1 dropped to 0.414 on seed 2024.**
+What I'd do: look at the experience posts that end with advice, since those are the ones the model most often calls take. I'd check whether my "even if it ends with a lesson" clause is being applied the same way every time. Why I stopped: rechecking that clause would have meant relabeling again, which is a second change. This unit allows only one, and I also ran out of time.
 
+**Criterion 3: reasoned F1 is still 0.000.**
+What I'd do: collect about 30 more reasoned comments from threads where people argue about rules or policies, like financial aid or registration. Relabeling 7 rows didn't help, so I think too few examples is now the main cause. Why I stopped: adding and carefully labeling 30 new posts would have been a second change. This unit allows only one, and I also ran out of time. 
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
-<!-- Two sentences. Your confusion matrix is the evidence. -->
-
-
+I meant reasoned to capture comments that build a real argument, but the model never predicted it once in six runs. My confusion matrix shows it learned reasoned posts as stories or advice instead, because most of them look like experience or take on the surface.
 
 <!-- ═════════════════════════════════════════════════════════════════════
 
